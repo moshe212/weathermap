@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title> Working with libraries</title>
+        <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js'></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' /> -->
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+            integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+            crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+    <body>
+        <div id = "text">
+            <select id = "citys" onchange="getWeather()">
+                <option value="2643743">London</option>
+                <option value="281184">Jerusalem</option>
+                <option value="5128638">New-York</option>
+                <option value="2759794">Amsterdam</option>
+            </select>
+
+            <div class ="details">
+                <p class="Cloud">Cloud: </p>
+                <span id="CloudDt"></span>
+                <br>
+                <p class="Cloud_desc">Cloud_desc: </p>
+                <span id="Cloud_descDt"></span>
+                <br>
+                <p class="Temp">Temp: </p>
+                <span id="TempDt"></span>
+                <br>
+                <p class="Wind_deg">Wind_deg: </p>
+                <span id="Wind_degDt"></span>
+                <br>
+                <p class="Wind_Speed">Wind_Speed: </p>
+                <span id="Wind_SpeedDt"></span>
+
+            </div>
+
+        </div>
+
+        <div id="map"></div>
+        <div id='marker'></div>
+
+
+        <script src="main.js"></script>
+
+    </body>
+</html>
